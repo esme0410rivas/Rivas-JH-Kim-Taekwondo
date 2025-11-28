@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivas JH-Kim Taekwondo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem 2rem;
+            border-bottom: 3px solid #e94560;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #e94560;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #e94560;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #ddd;
+        }
+
+        .image-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(233, 69, 96, 0.3);
+        }
+
+        .photo-upload {
+            background: rgba(233, 69, 96, 0.2);
+            border: 3px dashed #e94560;
+            border-radius: 10px;
+            padding: 3rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .photo-upload:hover {
+            background: rgba(233, 69, 96, 0.3);
+            border-color: #ff6b81;
+        }
+
+        .photo-upload p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .photo-upload small {
+            color: #bbb;
+        }
+
+        #photoPreview {
+            max-width: 100%;
+            border-radius: 10px;
+            display: none;
+            margin-top: 1rem;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #ddd;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #e94560;
+            color: #fff;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #ff6b81;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.3);
+            margin-top: 3rem;
+            border-top: 2px solid #e94560;
+        }
+
+        .copyright {
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .nav {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#team">Team</a>
+            <a href="#competitions">Competitions</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Rivas JH-Kim Taekwondo</h1>
+            <p class="subtitle">One dream, One team, One family!</p>
+
+            <div class="image-container">
+                <label for="photoInput" class="photo-upload">
+                    <p>📸 Click here to upload your photo</p>
+                    <small>Upload an image of your school, team, or dojang</small>
+                </label>
+                <input type="file" id="photoInput" accept="image/*" style="display: none;">
+                <img id="photoPreview" alt="Team Photo">
+            </div>
+        </section>
+
+        <section class="content">
+            <p>
+                Welcome to the Rivas JH-Kim Taekwondo Competition Team! We are dedicated to developing champion athletes through discipline, perseverance, and an unwavering commitment to excellence in martial arts. Our program focuses not only on physical strength and technical mastery, but also on building character, confidence, and a strong competitive spirit.
+            </p>
+            <p>
+                As a team, we train with purpose, push each other to grow, and uphold the highest standards both on and off the mat. We compete at elite levels, proudly representing our school with honor, respect, and skill. Every athlete is encouraged to pursue their personal best while contributing to the success of the team as a whole.
+            </p>
+            <p>
+                At the heart of our philosophy is our motto: "One Dream, One Team, One Family." It reflects the unity, shared goals, and supportive community that define who we are. Together, we strive, we overcome challenges, and we celebrate every achievement—big or small.
+            </p>
+            <p>
+                Join us on our journey as we continue to grow, compete, and become the best version of ourselves—individually and as a team.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="copyright">© 2024 Rivas JH-Kim Taekwondo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const photoInput = document.getElementById('photoInput');
+        const photoPreview = document.getElementById('photoPreview');
+        const uploadBox = document.querySelector('.photo-upload');
+
+        photoInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    photoPreview.src = e.target.result;
+                    photoPreview.style.display = 'block';
+                    uploadBox.style.display = 'none';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
