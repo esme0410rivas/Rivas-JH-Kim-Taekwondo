@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Rivas JH-Kim Taekwondo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem 2rem;
+            border-bottom: 3px solid #e94560;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #e94560;
+        }
+
+        .nav a.active {
+            color: #e94560;
+            border-bottom: 2px solid #e94560;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 3rem 2rem 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #e94560;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #ddd;
+            font-style: italic;
+        }
+
+        .content-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(233, 69, 96, 0.2);
+            transition: all 0.3s;
+        }
+
+        .section:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(233, 69, 96, 0.4);
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            color: #e94560;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(233, 69, 96, 0.3);
+            padding-bottom: 0.5rem;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ddd;
+            margin-bottom: 1rem;
+        }
+
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .value-card {
+            background: rgba(233, 69, 96, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 2px solid rgba(233, 69, 96, 0.3);
+            transition: all 0.3s;
+        }
+
+        .value-card:hover {
+            background: rgba(233, 69, 96, 0.2);
+            border-color: #e94560;
+            transform: scale(1.05);
+        }
+
+        .value-card h3 {
+            color: #ff6b81;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-card p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.3);
+            margin-top: 3rem;
+            border-top: 2px solid #e94560;
+        }
+
+        .copyright {
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .section {
+                padding: 1.5rem;
+            }
+            .nav {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#about" class="active">About</a>
+            <a href="#team">Team</a>
+            <a href="#competitions">Competitions</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>About Us</h1>
+            <p class="tagline">One dream, One team, One family!</p>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="image-container" style="margin-bottom: 2rem; background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 2rem; backdrop-filter: blur(10px); border: 1px solid rgba(233, 69, 96, 0.2);">
+                <label for="aboutPhotoInput" class="photo-upload" style="background: rgba(233, 69, 96, 0.2); border: 3px dashed #e94560; border-radius: 10px; padding: 2rem; cursor: pointer; display: block; text-align: center; transition: all 0.3s;">
+                    <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">📸 Click here to upload your photo</p>
+                    <small style="color: #bbb;">Add a photo of your team or dojang</small>
+                </label>
+                <input type="file" id="aboutPhotoInput" accept="image/*" style="display: none;">
+                <img id="aboutPhotoPreview" alt="Team Photo" style="max-width: 100%; border-radius: 10px; display: none; margin-top: 1rem;">
+            </div>
+
+            <section class="section">
+                <h2>Who We Are</h2>
+                <p>
+                    Rivas JH-Kim Taekwondo Competition Team is a dedicated group of martial artists committed to excellence in competitive Taekwondo. We are more than just a team—we are a family united by shared goals, mutual respect, and an unwavering passion for the sport.
+                </p>
+                <p>
+                    Our athletes come from diverse backgrounds, but we are bonded by our commitment to pushing our limits, supporting one another, and representing our school with pride and honor at every competition.
+                </p>
+            </section>
+
+            <script>
+                const aboutPhotoInput = document.getElementById('aboutPhotoInput');
+                const aboutPhotoPreview = document.getElementById('aboutPhotoPreview');
+                const aboutUploadBox = document.querySelector('.photo-upload');
+
+                aboutPhotoInput.addEventListener('change', function(e) {
+                    const file = e.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            aboutPhotoPreview.src = e.target.result;
+                            aboutPhotoPreview.style.display = 'block';
+                            aboutUploadBox.style.display = 'none';
+                        }
+                        reader.readAsDataURL(file);
+                    }
+                });
+            </script>
+
+            <section class="section">
+                <h2>What We Do</h2>
+                <p>
+                    We train rigorously to compete at the highest levels of Taekwondo competition. Our program combines technical skill development, physical conditioning, mental preparation, and strategic competition planning.
+                </p>
+                <p>
+                    Each training session is designed to challenge our athletes, refine their techniques, and build the mental toughness required to succeed in high-pressure competitive environments. We participate in local, regional, and national tournaments, consistently striving to improve and achieve excellence.
+                </p>
+                <p>
+                    Beyond competition, we focus on developing well-rounded individuals who embody the core tenets of Taekwondo: courtesy, integrity, perseverance, self-control, and indomitable spirit.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <h3>🥋 Excellence</h3>
+                        <p>We strive for mastery in every technique and performance, never settling for mediocrity.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>🤝 Unity</h3>
+                        <p>We train together, support each other, and celebrate our victories as one team.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>💪 Discipline</h3>
+                        <p>We maintain focus, dedication, and commitment both in training and in life.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>🏆 Respect</h3>
+                        <p>We honor our opponents, instructors, teammates, and the traditions of Taekwondo.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>🎯 Growth</h3>
+                        <p>We embrace challenges as opportunities to learn and become stronger.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>❤️ Family</h3>
+                        <p>We support each other through every challenge and triumph, on and off the mat.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Our Mission</h2>
+                <p>
+                    Our mission is to develop champion athletes who excel not only in competition but also in character. We aim to create an environment where every team member can reach their full potential while contributing to the collective success of the team.
+                </p>
+                <p>
+                    Through intensive training, competitive experience, and a supportive team culture, we prepare our athletes to face any challenge with confidence, skill, and the spirit of a true martial artist.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="copyright">© 2024 Rivas JH-Kim Taekwondo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
