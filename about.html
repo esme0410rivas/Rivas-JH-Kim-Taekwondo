@@ -138,7 +138,24 @@
             color: #ccc;
         }
 
-        .footer {
+        .image-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: transparent;
+            border-radius: 15px;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            width: 500px;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
             text-align: center;
             padding: 2rem;
             background: rgba(0, 0, 0, 0.3);
@@ -165,13 +182,13 @@
     </style>
 </head>
 <body>
-     <header class="header">
+    <header class="header">
         <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="team.html">Our Team</a>
-            <a href="competitions.html">Competitions</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="#home">Home</a>
+            <a href="#about" class="active">About</a>
+            <a href="#team">Team</a>
+            <a href="#competitions">Competitions</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -182,13 +199,8 @@
         </div>
 
         <div class="content-wrapper">
-            <div class="image-container" style="margin-bottom: 2rem; background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 2rem; backdrop-filter: blur(10px); border: 1px solid rgba(233, 69, 96, 0.2);">
-                <label for="aboutPhotoInput" class="photo-upload" style="background: rgba(233, 69, 96, 0.2); border: 3px dashed #e94560; border-radius: 10px; padding: 2rem; cursor: pointer; display: block; text-align: center; transition: all 0.3s;">
-                    <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">📸 Click here to upload your photo</p>
-                    <small style="color: #bbb;">Add a photo of your team or dojang</small>
-                </label>
-                <input type="file" id="aboutPhotoInput" accept="image/*" style="display: none;">
-                <img id="aboutPhotoPreview" alt="Team Photo" style="max-width: 100%; border-radius: 10px; display: none; margin-top: 1rem;">
+            <div class="image-container">
+                <img src="master-rivas.jpg" alt="Master Rivas">
             </div>
 
             <section class="section">
@@ -200,25 +212,6 @@
                     Our athletes come from diverse backgrounds, but we are bonded by our commitment to pushing our limits, supporting one another, and representing our school with pride and honor at every competition.
                 </p>
             </section>
-
-            <script>
-                const aboutPhotoInput = document.getElementById('aboutPhotoInput');
-                const aboutPhotoPreview = document.getElementById('aboutPhotoPreview');
-                const aboutUploadBox = document.querySelector('.photo-upload');
-
-                aboutPhotoInput.addEventListener('change', function(e) {
-                    const file = e.target.files[0];
-                    if (file) {
-                        const reader = new FileReader();
-                        reader.onload = function(e) {
-                            aboutPhotoPreview.src = e.target.result;
-                            aboutPhotoPreview.style.display = 'block';
-                            aboutUploadBox.style.display = 'none';
-                        }
-                        reader.readAsDataURL(file);
-                    }
-                });
-            </script>
 
             <section class="section">
                 <h2>What We Do</h2>
