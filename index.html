@@ -175,12 +175,7 @@
             <p class="subtitle">One dream, One team, One family!</p>
 
             <div class="image-container">
-                <label for="photoInput" class="photo-upload">
-                    <p>📸 Click here to upload your photo</p>
-                    <small>Upload an image of your school, team, or dojang</small>
-                </label>
-                <input type="file" id="photoInput" accept="image/*" style="display: none;">
-                <img id="photoPreview" alt="Team Photo">
+                <img src="team-photo.jpg" alt="Rivas JH-Kim Taekwondo Team" id="photoPreview" style="max-width: 100%; border-radius: 10px; display: block;">
             </div>
         </section>
 
@@ -205,22 +200,7 @@
     </footer>
 
     <script>
-        const photoInput = document.getElementById('photoInput');
-        const photoPreview = document.getElementById('photoPreview');
-        const uploadBox = document.querySelector('.photo-upload');
-
-        photoInput.addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    photoPreview.src = e.target.result;
-                    photoPreview.style.display = 'block';
-                    uploadBox.style.display = 'none';
-                }
-                reader.readAsDataURL(file);
-            }
-        });
+        // Image is now loaded directly from team-photo.jpg file
     </script>
 </body>
 </html>
