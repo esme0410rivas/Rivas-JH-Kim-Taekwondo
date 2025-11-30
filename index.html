@@ -63,13 +63,22 @@
         }
 
         .image-container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 2rem auto;
-            background: rgba(255, 255, 255, 0.1);
+            background: transparent;
             border-radius: 15px;
             padding: 2rem;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(233, 69, 96, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            width: 500px;
+            height: auto;
+            border-radius: 10px;
+            display: block;
         }
 
         .photo-upload {
@@ -175,7 +184,7 @@
             <p class="subtitle">One dream, One team, One family!</p>
 
             <div class="image-container">
-                <img src="team-photo.jpg" alt="Rivas JH-Kim Taekwondo Team" id="photoPreview" style="max-width: 100%; border-radius: 10px; display: block;">
+                <img src="team-photo.jpg" alt="Rivas JH-Kim Taekwondo Team">
             </div>
         </section>
 
